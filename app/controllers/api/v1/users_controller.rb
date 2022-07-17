@@ -35,6 +35,7 @@ class Api::V1::UsersController < ApplicationController
 
   # DELETE /api/v1/users/1
   def destroy
+    @user.cards.destroy_all
     @user.destroy
   end
 
